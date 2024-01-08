@@ -1,3 +1,5 @@
+import commonjs from "@rollup/plugin-commonjs";
+import { nodeResolve } from "@rollup/plugin-node-resolve";
 import { defineConfig } from "rollup";
 
 export default defineConfig({
@@ -6,4 +8,5 @@ export default defineConfig({
     file: process.env.npm_package_main,
     format: "umd",
   },
+  plugins: [nodeResolve(), commonjs()],
 });
