@@ -3,6 +3,7 @@ import htm from "htm/mini";
 import urlJoin from "url-join";
 import vhtml from "vhtml";
 
+
 const html = htm.bind(vhtml);
 
 const PLUGIN_CONFIG_NAME = "githubFooter";
@@ -24,59 +25,61 @@ const install = (hook, vm) => {
     const { file } = vm.route;
 
     const nav = html`
-      <ul class="docsify-github-footer">
-        <li>
-          <a
-            href=${urlJoin(
-              "https://github.com",
-              owner,
-              repository,
-              "edit",
-              ref,
-              dir,
-              file,
-            )}
-            target="_blank"
-          >
-            ✍️
-            <span>Edit on GitHub</span>
-          </a>
-        </li>
-        <li>
-          <a
-            href=${urlJoin(
-              "https://github.dev",
-              owner,
-              repository,
-              "blob",
-              ref,
-              dir,
-              file,
-            )}
-            target="_blank"
-          >
-            🖥
-            <span>Open in github.dev</span>
-          </a>
-        </li>
-        <li>
-          <a
-            href=${urlJoin(
-              "https://github.com",
-              owner,
-              repository,
-              "commits",
-              ref,
-              dir,
-              file,
-            )}
-            target="_blank"
-          >
-            ⏱️
-            <span>View History</span>
-          </a>
-        </li>
-      </ul>
+      <div class="docsify-github-footer">
+        <ul>
+          <li>
+            <a
+              href=${urlJoin(
+                "https://github.com",
+                owner,
+                repository,
+                "edit",
+                ref,
+                dir,
+                file,
+              )}
+              target="_blank"
+            >
+              ✍️
+              <span>Edit on GitHub</span>
+            </a>
+          </li>
+          <li>
+            <a
+              href=${urlJoin(
+                "https://github.dev",
+                owner,
+                repository,
+                "blob",
+                ref,
+                dir,
+                file,
+              )}
+              target="_blank"
+            >
+              🖥
+              <span>Open in github.dev</span>
+            </a>
+          </li>
+          <li>
+            <a
+              href=${urlJoin(
+                "https://github.com",
+                owner,
+                repository,
+                "commits",
+                ref,
+                dir,
+                file,
+              )}
+              target="_blank"
+            >
+              ⏱️
+              <span>View History</span>
+            </a>
+          </li>
+        </ul>
+      </div>
     `;
 
     return `${source}${nav}`;
