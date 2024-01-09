@@ -30,6 +30,7 @@
   },
   "dependencies": {
     "htm": "^3.1.1",
+    "url-join": "^5.0.0",
     "vhtml": "^2.2.0"
   },
   "devDependencies": {
@@ -40,9 +41,12 @@
     "@trivago/prettier-plugin-sort-imports": "^4.3.0",
     "husky": "^8.0.3",
     "lint-staged": "^15.2.0",
+    "postcss-preset-env": "^9.3.0",
     "prettier": "^3.1.1",
+    "prettier-plugin-css-order": "^2.0.1",
     "prettier-plugin-packagejson": "^2.4.9",
-    "rollup": "^4.9.4"
+    "rollup": "^4.9.4",
+    "rollup-plugin-postcss": "^4.0.2"
   },
   "packageManager": "pnpm@8.14.0+sha256.9cebf61abd83f68177b29484da72da9751390eaad46dfc3072d266bfbb1ba7bf",
   "volta": {
