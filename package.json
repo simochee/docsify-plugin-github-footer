@@ -1,6 +1,6 @@
 {
   "name": "docsify-plugin-github-footer",
-  "description": "",
+  "description": "Useful GitHub Pages links footer for Docsify",
   "keywords": [
     "docsify"
   ],
@@ -8,6 +8,7 @@
     "type": "git",
     "url": "git+https://github.com/simochee/docsify-plugin-github-footer.git"
   },
+  "license": "MIT",
   "author": {
     "name": "simochee",
     "email": "lollipop@simochee.net",

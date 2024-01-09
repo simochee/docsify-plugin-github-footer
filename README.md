@@ -1,18 +1,15 @@
-> [!IMPORTANT]
-> First, replace some placeholder `docsify-plugin-github-footer` with your package name.
-
 <p align="center">
   <img src="docsify.svg" alt="Docsify Logo" height="128">
 </p>
 <h1 align="center">Docsify Plugins</h1>
-<h3 align="center">docsify-plugin-github-footer</h3>
+<h3 align="center">GitHub Footer</h3>
 <p align="center">by <a href="https://github.com/simochee">simochee</a></p>
 
 [![jsDelivr](https://data.jsdelivr.com/v1/package/npm/docsify-plugin-github-footer/badge)](https://www.jsdelivr.com/package/npm/docsify-plugin-github-footer)
 [![npm version](https://badge.fury.io/js/docsify-plugin-github-footer.svg)](https://badge.fury.io/js/docsify-plugin-github-footer)
 [![License](https://img.shields.io/npm/l/docsify-plugin-github-footer)](https://github.com/simochee/docsify-plugin-github-footer/blob/main/LICENSE)
 
-about this plugin...
+Useful GitHub Pages links footer for Docsify.
 
 ## 📀 Installation
 
@@ -28,7 +25,32 @@ Insert a script tag to load the plugin script file after loading the Docsify scr
 
 ## 🔰 Usage
 
-how to use this plugin...
+Configure the plugin in the Docsify configuration.
+
+```html
+<script>
+  window.$docsify = {
+    githubFooter: {
+      // required: production branch
+      ref: 'develop',
+      // optional: inherit from $docsify.repo
+      repo: 'simochee/docs-repo',
+      // optional: base directory of the repo
+      dir: 'docs',
+    }
+  };
+</script>
+```
+
+### Customize footer style
+
+```html
+<style>
+.docsify-github-footer {
+  /* override style */
+}
+</style>
+```
 
 ## 💻 Development
 
